@@ -28,7 +28,7 @@ int main() {
 
   XEvent event;
   while (true) {
-    m = {0, 0};
+    movement = {0, 0};
     XNextEvent(display.display(), &event);
     switch (event.type) {
       case Expose:
@@ -58,7 +58,7 @@ int main() {
 
     // Draw Stuff Here
     XClearWindow(display.display(), window.window());
-    shape.draw_rectangle(e.x - 5, e.y - 5, 10, 10, true);
+    shape.draw_rectangle(player.x - 5, player.y - 5, 10, 10, true);
   }
 
   return 0;
