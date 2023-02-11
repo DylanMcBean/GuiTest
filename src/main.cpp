@@ -1,5 +1,6 @@
 #include <X11/keysym.h>
 
+#include <cmath>
 #include <iostream>
 
 #include "player.hpp"
@@ -7,7 +8,7 @@
 #include "x11window.hpp"
 
 typedef struct Movement {
-  int x, y;
+  double x, y;
 } Movement;
 
 bool IsKeyPressed(X11Display &display, char *keymap, KeySym key) {
